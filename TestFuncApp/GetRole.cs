@@ -3,12 +3,11 @@ using TestFuncApp.Authorization;
 
 namespace TestFuncApp;
 
+/// <summary>
+/// Demo function requiring a specific role to access the "role" endpoint
+/// </summary>
 public class GetRole
 {
-	private readonly ILogger _logger;
-	public GetRole(ILoggerFactory loggerFactory) => _logger = loggerFactory.CreateLogger<GetClaim>();
-
-
 	[Function("GetRole")]
 	[RequireRole("%RoleName%")]
 	public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "role")] HttpRequestData req, FunctionContext context)

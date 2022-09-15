@@ -3,6 +3,9 @@ using TestFuncApp.Authorization;
 
 namespace TestFuncApp;
 
+/// <summary>
+/// Demo function requiring a specific claim to access the "claim" endpoint
+/// </summary>
 public class GetClaim
 {
 	private readonly ILogger _logger;

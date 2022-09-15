@@ -2,6 +2,9 @@ using MNP.ServiceFabric.Shared.FunctionsMiddleware.Auth;
 
 namespace TestFuncApp;
 
+/// <summary>
+/// Demo function allowing anonymous access to "ping" endpoint
+/// </summary>
 public class Ping
 {
 	private readonly ILogger _logger;
